@@ -1,0 +1,91 @@
+.main{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+
+
+#login {
+    position: fixed;
+    left: 18.5vw;
+    top: 20vh;
+}
+
+#user {
+    position: fixed;
+    left: 18vw;
+    top: 35vh;
+    width: 20vw;
+    height: 40px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid black;
+    padding-left: 10px;
+}
+#pass {
+    position: fixed;
+    left: 18vw;
+    top: 43vh;
+    width: 20vw;
+    height: 40px;
+    border-radius: 7px;
+    outline: none;
+    padding-left: 10px;
+    border: 1px solid black;
+}
+
+button {
+    border-radius: 12px;
+    background-color: rgb(255, 137, 27);
+    border: 1px solid black;
+    padding: 10px;
+    width: 80px;
+    cursor: pointer;
+}
+
+#logb {
+    position: fixed;
+    left: 25.5vw;
+    top: 55vh;
+}
+#loginimg {
+    position: fixed;
+    top: 3vh;
+    right: 2vh;
+    width: 45vw;
+    height: 94vh;
+    border-radius: 30px;
+}
+
+@font-face {
+        font-family: safiro;
+        src: url(./safiro-medium-webfont.ttf)format("truetype");
+        font-display: swap
+}
+
+h1{
+    font-family: safiro;
+    font-weight: 1;
+}
+
+#log {
+    width: 50px;
+    position: fixed;
+    top: 3vh;
+    left: 3vh;
+}
+
+#reg {
+    color: white;
+    font-family: safiro;
+    cursor: pointer;
+    position: fixed;
+    top: 80vh;
+    left: 23vw;
+
+}
