@@ -10,7 +10,7 @@ body{
 
 
 
-#login {
+#create {
     position: fixed;
     left: 19.5vw;
     top: 20vh;
@@ -84,6 +84,6 @@ h1{
     cursor: pointer;
     position: fixed;
     top: 80vh;
-    left: 24vw;
+    left: 22vw;
 
 }
