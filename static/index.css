@@ -111,4 +111,33 @@ h1, p{
     color: white;
     text-decoration: none;
     display: inline-block;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    transition: 0.2s;
+
+}
+
+
+.note-card:hover {
+    background-color: white;
+    color: black;
+}
+
+
+a {
+    font-family: safiro;
+}
+.note-card h2,
+.note-card p,
+.note-card small {
+    margin: 0;
+}
+
+.tit {
+    display: flex;
+    justify-content: space-between;
 }

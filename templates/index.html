@@ -65,17 +65,15 @@
             class="note-card"
             href="{{ url_for('edit', id=note.id) }}">
 
-                <small>
-
-                    {{ note.created_at.strftime("%d %b %Y") }}
-
-                </small>
-
-                <h2>
-
-                    {{ note.title }}
-
-                </h2>
+                <div class="tit">
+                    
+                    <h2>
+                        {{ note.title }}
+                    </h2>
+                    <small>
+                        {{ note.created_at.strftime("%d %b %Y") }}
+                    </small>
+                </div>
 
                 <p>
 
