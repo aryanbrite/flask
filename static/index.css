@@ -21,8 +21,33 @@ h1, p{
 #new-note{
     color: white;
     text-decoration: none;
+
 }
 
 #new{
     border: 1px solid white;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 12px;
+    color: black;
+    background-color: white;
+    position: fixed;
+    top: 1vh;
+    right: 10vw;
+}
+
+#profid {
+    width: 40px;
+}
+
+#profile-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    cursor: pointer;
+    position: fixed;
+    right: 6vw;
+    top: 3vh;
 }
