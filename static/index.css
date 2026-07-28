@@ -1,0 +1,19 @@
+.main{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+@font-face {
+        font-family: safiro;
+        src: url(./safiro-medium-webfont.ttf)format("truetype");
+        font-display: swap
+}
+
+h1{
+    font-family: safiro;
+    font-weight: 1;
+}
