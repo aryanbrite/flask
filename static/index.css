@@ -79,7 +79,36 @@ h1, p{
 
 #profile-menu.show{
     opacity: 1;
+    pointer-events: auto;
 }
 #profile-menu a + a{
     margin-top: 12px;
+}
+
+#profile-btn{
+    z-index: 1000;
+}
+
+#profile-menu{
+    z-index: 1000;
+}
+
+.note-card{
+    position: relative;
+    z-index: 1;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(255, 137, 27);
+}
+
+#hr {
+    margin-bottom: 6vh;
+}
+
+.note-card {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
 }

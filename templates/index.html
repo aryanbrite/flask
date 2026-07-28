@@ -21,7 +21,7 @@
         <h1 id="my" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Notes</h1>
         <img id="log" src="https://cdn.hackclub.com/019fa7be-ff73-7b05-bfe8-06f4a1d2d316/Untitled%20design.png" alt="">
 
-        <hr>
+        <hr id="hr" >
 
         <div class="top-right">
 
@@ -37,12 +37,12 @@
 
                 <div id="profile-menu">
 
-                    <p>{{ current_user.username }}</p>
+                    <p>Hi {{ current_user.username }}</p>
 
-                    <a href="/settings">
+                    <a class="link" href="/settings">
                         Settings
                     </a>
-                    <a href="/logout">
+                    <a class="link" href="/logout">
                         Logout
                     </a>
 
@@ -113,8 +113,28 @@
 const profileBtn = document.getElementById("profile-btn");
 const profileMenu = document.getElementById("profile-menu");
 
-profileBtn.onclick = () => {
+profileBtn.onclick = (e) => {
+    e.stopPropagation();
     profileMenu.classList.toggle("show");
+};
+
+
+profileMenu.onclick = (e) => {
+    e.stopPropagation();
+};
+
+
+document.onclick = (e) => {
+
+    if(profileMenu.classList.contains("show")) {
+
+        profileMenu.classList.remove("show");
+
+        e.preventDefault();
+        e.stopPropagation();
+
+    }
+
 };
 </script>
 </body>
