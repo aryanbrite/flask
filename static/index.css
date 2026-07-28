@@ -80,3 +80,6 @@ h1, p{
 #profile-menu.show{
     opacity: 1;
 }
+#profile-menu a + a{
+    margin-top: 12px;
+}
