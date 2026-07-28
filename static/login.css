@@ -8,6 +8,58 @@ body{
     color: white;
 }
 
-.logc {
+
+
+#login {
+    position: fixed;
+    left: 19.5vw;
+    top: 20vh;
+}
+
+#user {
+    position: fixed;
+    left: 20vw;
+    top: 35vh;
+    width: 15vw;
+    height: 20px;
+}
+#pass {
+    position: fixed;
+    left: 20vw;
+    top: 40vh;
+    width: 15vw;
+    height: 20px;
+}
+
+button {
+    border-radius: 12px;
+    background-color: rgb(255, 137, 27);
     border: 1px solid black;
+    padding: 10px;
+    width: 80px;
+}
+
+#logb {
+    position: fixed;
+    left: 25vw;
+    top: 50vh;
+}
+#loginimg {
+    position: fixed;
+    top: 3vh;
+    right: 2vh;
+    width: 45vw;
+    height: 94vh;
+    border-radius: 30px;
+}
+
+@font-face {
+        font-family: safiro;
+        src: url(./safiro-medium-webfont.ttf)format("truetype");
+        font-display: swap
+}
+
+h1{
+    font-family: safiro;
+    font-weight: 1;
 }
