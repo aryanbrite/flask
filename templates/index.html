@@ -1,46 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Notes</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='index.css') }}">
 
 </head>
 
 <body>
+
 <div class="main">
-    
-    <h1>My Notes</h1>
-    
-    <form action="/add" method="POST">
-        <input type="text" name="note" placeholder="Write a note">
-        <button>Add</button>
-    </form>
-    
-    
-    {% if notes %}
-    
-        {% for note in notes %}
-    
-            <div>
-                <p>{{ note.content }}</p>
-    
-                <a href="{{ url_for('edit', id=note.id) }}">
-                    Edit
-                </a>
-    
-                <a href="{{ url_for('delete', id=note.id) }}">
-                    Delete
-                </a>
+
+    <header>
+
+        <h1>My Notes</h1>
+
+        <div class="top-right">
+
+            <a href="/new" id="new-note">
+                +
+            </a>
+
+            <div class="profile">
+
+                <button id="profile-btn">
+                    👤
+                </button>
+
+                <div class="profile-menu">
+
+                    <p>{{ current_user.username }}</p>
+
+                    <a href="/settings">
+                        Settings
+                    </a>
+
+                    <a href="/logout">
+                        Logout
+                    </a>
+
+                </div>
+
             </div>
-    
+
+        </div>
+
+    </header>
+
+
+    {% if notes %}
+
+        <div class="notes-grid">
+
+        {% for note in notes %}
+
+            <a
+            class="note-card"
+            href="{{ url_for('edit', id=note.id) }}">
+
+                <small>
+
+                    {{ note.created_at.strftime("%d %b %Y") }}
+
+                </small>
+
+                <h2>
+
+                    {{ note.title }}
+
+                </h2>
+
+                <p>
+
+                    {{ note.content[:150] }}
+
+                    {% if note.content|length > 150 %}
+                        ...
+                    {% endif %}
+
+                </p>
+
+            </a>
+
         {% endfor %}
-    
+
+        </div>
+
     {% else %}
-    
-    <p>No notes yet</p>
-    
+
+        <div class="empty">
+
+            <h2>No Notes Yet</h2>
+
+            <p>
+
+                Click the + button to create your first note.
+
+            </p>
+
+        </div>
+
     {% endif %}
-    
+
 </div>
 
 </body>
