@@ -1,23 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>Notes</title>
 </head>
+
 <body>
-    <h1>{{title}}</h1>
-    <form action="/add" method="POST" >
-        <input type="text" name="note" id="">
-        <button>Add Note</button>
-    </form>
-    {% if not notes %}
-        <p>No notes yet :)</p>
-    {% else %}    
+
+<h1>Notes</h1>
+
+<form action="/add" method="POST">
+    <input type="text" name="note" placeholder="Write a note">
+    <button>Add</button>
+</form>
+
+
+{% if notes %}
+
     {% for note in notes %}
-        <p>{{note.content}}</p>
-        <a href="{{url_for ('delete', id=note.id )}}">Delete</a>
+
+        <div>
+            <p>{{ note.content }}</p>
+
+            <a href="{{ url_for('edit', id=note.id) }}">
+                Edit
+            </a>
+
+            <a href="{{ url_for('delete', id=note.id) }}">
+                Delete
+            </a>
+        </div>
+
     {% endfor %}
-    {% endif %}
+
+{% else %}
+
+<p>No notes yet</p>
+
+{% endif %}
+
+
 </body>
 </html>
