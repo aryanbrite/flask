@@ -37,6 +37,7 @@ button {
     border: 1px solid black;
     padding: 10px;
     width: 80px;
+    cursor: pointer;
 }
 
 #logb {
@@ -62,4 +63,21 @@ button {
 h1{
     font-family: safiro;
     font-weight: 1;
+}
+
+#log {
+    width: 50px;
+    position: fixed;
+    top: 3vh;
+    left: 3vh;
+}
+
+#reg {
+    color: white;
+    font-family: safiro;
+    cursor: pointer;
+    position: fixed;
+    top: 60vh;
+    left: 23.5vw;
+
 }
