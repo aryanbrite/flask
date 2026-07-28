@@ -1,6 +1,6 @@
 .main{
-    margin-left: 4vw;
-    margin-right: 4vw;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
 body{
@@ -24,4 +24,28 @@ h1, p{
 
 #hr {
     margin-bottom: 6vh;
+}
+
+#log {
+    width: 50px;
+    position: fixed;
+    top: 2vh;
+    left: 9vh;
+}
+
+#back {
+    display: block;
+    border: 1px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    top: 1vh;
+    left: 0;
+}
+
+#back:hover {
+    background-color: rgb(255, 137, 27);;
 }

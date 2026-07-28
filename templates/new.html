@@ -21,14 +21,15 @@
         <header>
     
             <a href="{{ url_for('home') }}" id="back">
-                ← Back
+                <h1>←</h1>
             </a>
     
-            <h1>New Note</h1>
+        <h1 id="my" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My Notes</h1>
+        <img id="log" src="https://cdn.hackclub.com/019fa7be-ff73-7b05-bfe8-06f4a1d2d316/Untitled%20design.png" alt="">
     
         </header>
 
-        <hr>
+        <hr id="hr" >
     
         <form
         action="{{ url_for('add') }}"
