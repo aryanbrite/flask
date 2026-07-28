@@ -51,3 +51,10 @@ h1, p{
     right: 6vw;
     top: 3vh;
 }
+
+#log {
+    width: 50px;
+    position: fixed;
+    top: 2vh;
+    left: 9vh;
+}
