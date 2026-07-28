@@ -8,7 +8,8 @@ app.config["SQLALCHEMY_DATABASE_URI"]="sqlite:///notes.db"
 db = SQLAlchemy(app)
 
 class Note (db.Model):
-    id = db.Column(db.integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.String)
 
 notes = []
 
@@ -16,13 +17,16 @@ notes = []
 @app.route("/")
 def home():
     title = "Notes"
-    return render_template("index.html", title=title, notes=notes)
+    return render_template("index.html", title=title, notes=Note.query.all())
 
 @app.route("/add", methods=["POST"])
 def add():
     ho = request.form["note"]
     notes.append(ho)
     return redirect(url_for('home'))
+
+with app.app_context():
+    db.create_all()
 
 if __name__ == "__main__":
     app.run(debug=True)
