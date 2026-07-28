@@ -9,50 +9,55 @@
 
     <link rel="stylesheet"
     href="{{ url_for('static', filename='new.css') }}">
+    <link rel="shortcut icon" href="https://cdn.hackclub.com/019fa7be-ff73-7b05-bfe8-06f4a1d2d316/Untitled%20design.png" type="image/x-icon">
 
 </head>
 
 <body>
-
 <div class="main">
+    
+    <div class="main">
+    
+        <header>
+    
+            <a href="{{ url_for('home') }}" id="back">
+                ← Back
+            </a>
+    
+            <h1>New Note</h1>
+    
+        </header>
 
-    <header>
-
-        <a href="{{ url_for('home') }}" id="back">
-            ← Back
-        </a>
-
-        <h1>New Note</h1>
-
-    </header>
-
-    <form
-    action="{{ url_for('add') }}"
-    method="POST">
-
-        <input
-        type="text"
-        name="title"
-        placeholder="Note Title"
-        required
-        maxlength="100">
-
-        <textarea
-        name="note"
-        placeholder="Start writing..."
-        rows="18"
-        required></textarea>
-
-        <div class="actions">
-
-            <button type="submit">
-                Save Note
-            </button>
-
-        </div>
-
-    </form>
-
+        <hr>
+    
+        <form
+        action="{{ url_for('add') }}"
+        method="POST">
+    
+            <input
+            type="text"
+            name="title"
+            placeholder="Note Title"
+            required
+            maxlength="100">
+    
+            <textarea
+            name="note"
+            placeholder="Start writing..."
+            rows="18"
+            required></textarea>
+    
+            <div class="actions">
+    
+                <button type="submit">
+                    Save Note
+                </button>
+    
+            </div>
+    
+        </form>
+    
+    </div>
 </div>
 
 </body>
