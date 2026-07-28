@@ -10,7 +10,33 @@
     <link rel="stylesheet"
     href="{{ url_for('static', filename='index.css') }}">
     <link rel="shortcut icon" href="https://cdn.hackclub.com/019fa7be-ff73-7b05-bfe8-06f4a1d2d316/Untitled%20design.png" type="image/x-icon">
+<script>
+const btn = document.getElementById("profile-btn");
+const menu = document.getElementById("profile-menu");
 
+let timeout;
+
+btn.addEventListener("mouseenter", () => {
+    clearTimeout(timeout);
+    menu.classList.add("show");
+});
+
+menu.addEventListener("mouseenter", () => {
+    clearTimeout(timeout);
+});
+
+btn.addEventListener("mouseleave", () => {
+    timeout = setTimeout(() => {
+        menu.classList.remove("show");
+    }, 200);
+});
+
+menu.addEventListener("mouseleave", () => {
+    timeout = setTimeout(() => {
+        menu.classList.remove("show");
+    }, 200);
+});
+</script>
 
 </head>
 
@@ -33,27 +59,20 @@
 
             <div class="profile">
 
-                <button id="profile-btn">
-                    <img id="profid" src="https://cdn.hackclub.com/019fa86c-0540-770a-a637-d816a0c79e2e/Untitled%20design%20(3).png" alt="">
-                </button>
+    <button id="profile-btn">
+        <img id="profid" src="https://cdn.hackclub.com/019fa86c-0540-770a-a637-d816a0c79e2e/Untitled%20design%20(3).png">
+    </button>
 
-                <div class="profile-menu">
+    <div id="profile-menu" class="profile-menu">
 
-                    <p>{{ current_user.username }}</p>
+        <p>{{ current_user.username }}</p>
 
-                    <a href="/settings">
-                        Settings
-                    </a>
+        <a href="/settings">Settings</a>
+        <a href="/logout">Logout</a>
 
-                    <a href="/logout">
-                        Logout
-                    </a>
+    </div>
 
-                </div>
-
-            </div>
-
-        </div>
+</div>
 
     </header>
 
