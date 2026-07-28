@@ -226,7 +226,7 @@ def edit(id):
 
         db.session.commit()
 
-        return redirect(url_for("home"))
+        return redirect(url_for("view_note", id=note.id))
 
     return render_template(
         "edit.html",

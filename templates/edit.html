@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Edit Note</title>
+
+<title>Edit {{ note.title }}</title>
+
+<link rel="stylesheet"
+    href="{{ url_for('static', filename='edit.css') }}">
+
+<link rel="shortcut icon" href="https://cdn.hackclub.com/019fa7be-ff73-7b05-bfe8-06f4a1d2d316/Untitled%20design.png" type="image/x-icon">
+
 </head>
+
 
 <body>
 
-<h1>Edit Note</h1>
+<div class="main">
+
+    <h1>
+        &nbsp;
+    </h1>
+
+    <img id="log" src="https://cdn.hackclub.com/019fa7be-ff73-7b05-bfe8-06f4a1d2d316/Untitled%20design.png" alt="">
 
 
-<form method="POST">
+    <hr id="hr">
 
-    <input 
-    type="text" 
-    name="note" 
-    value="{{ note.content }}"
-    >
 
-    <button>
-        Save
-    </button>
+    <form method="POST">
 
-</form>
+
+        <input
+        type="text"
+        name="title"
+        id="titl"
+        value="{{ note.title }}"
+        required>
+
+
+        <textarea
+        name="note"
+        id="start"
+        required>{{ note.content }}</textarea>
+
+
+        <button id="submit" type="submit">
+            Save
+        </button>
+
+
+    </form>
+
+
+    <a href="{{ url_for('view_note', id=note.id) }}" id="back">
+        <h1>←</h1>
+    </a>
+
+
+</div>
 
 
 </body>
