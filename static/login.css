@@ -1,0 +1,13 @@
+.main{
+    margin-left: 4%;
+    margin-right: 4%;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.logc {
+    border: 1px solid black;
+}
