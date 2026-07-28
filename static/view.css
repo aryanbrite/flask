@@ -26,3 +26,49 @@ h1, p{
 #hr {
     margin-bottom: 6vh;
 }
+p {
+    font-size: 20px;
+}
+
+small {
+    font-family: safiro;
+    font-size: 15px;
+}
+
+#back {
+    display: block;
+    border: 1px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    top: 1vh;
+    left: 0;
+}
+
+#back:hover {
+    background-color: rgb(255, 137, 27);;
+}
+
+#submit {
+    border: 1px solid white;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 12px;
+    color: black;
+    background-color: white;
+    position: fixed;
+    top: 3vh;
+    right: 8vw;
+    cursor: pointer;
+    font-family: safiro;
+    font-weight: 1;
+    text-decoration: none;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

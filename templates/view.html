@@ -24,15 +24,13 @@
     </p>
     
     
-    <a href="{{ url_for('edit', id=note.id) }}">
-        <button>
-            Edit
-        </button>
+    <a href="{{ url_for('edit', id=note.id) }}" id="submit" >
+        Edit
     </a>
     
     
-    <a href="{{ url_for('home') }}">
-        Back
+    <a href="{{ url_for('home') }}" id="back" >
+        <h1>←</h1>
     </a>
     
 </div>
