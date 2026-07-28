@@ -11,7 +11,6 @@ class Note (db.Model):
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String)
 
-notes = []
 
 
 @app.route("/")
@@ -22,11 +21,20 @@ def home():
 @app.route("/add", methods=["POST"])
 def add():
     ho = request.form["note"]
-    notes.append(ho)
+    new_note =Note(content=ho)
+    db.session.add(new_note)
+    db.session.commit()
     return redirect(url_for('home'))
 
 with app.app_context():
     db.create_all()
+@app.route("/delete/<int:id>")
+def delete(id):
+    note = Note.query.get(id)
+    db.session.delete(note)
+    db.session.commit()
+    return redirect(url_for('home'))
+
 
 if __name__ == "__main__":
     app.run(debug=True)
