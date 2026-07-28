@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>{{ note.title }}</title>
+<link rel="stylesheet"
+    href="{{ url_for('static', filename='view.css') }}">
+    <link rel="shortcut icon" href="https://cdn.hackclub.com/019fa7be-ff73-7b05-bfe8-06f4a1d2d316/Untitled%20design.png" type="image/x-icon">
+
+</head>
+
+<body>
+<div class="main">
+
+    <h1 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ note.title }}</h1>
+    <img id="log" src="https://cdn.hackclub.com/019fa7be-ff73-7b05-bfe8-06f4a1d2d316/Untitled%20design.png" alt="">
+    <hr id="hr" >
+    <small>
+        {{ note.created_at.strftime("%d %b %Y") }}
+    </small>
+    
+    <p>
+        {{ note.content }}
+    </p>
+    
+    
+    <a href="{{ url_for('edit', id=note.id) }}">
+        <button>
+            Edit
+        </button>
+    </a>
+    
+    
+    <a href="{{ url_for('home') }}">
+        Back
+    </a>
+    
+</div>
+
+</body>
+</html>

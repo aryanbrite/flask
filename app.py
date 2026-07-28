@@ -233,6 +233,20 @@ def edit(id):
         note=note
     )
 
+@app.route("/note/<int:id>")
+@login_required
+def view_note(id):
+
+    note = Note.query.get_or_404(id)
+
+    if note.user_id != current_user.id:
+        return redirect(url_for("home"))
+
+    return render_template(
+        "view.html",
+        note=note
+    )
+
 
 # ------------------------
 # SETTINGS
