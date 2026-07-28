@@ -255,5 +255,25 @@ def new():
     return render_template("new.html")
 
 
+@app.route("/change-password", methods=["GET", "POST"])
+@login_required
+def change_password():
+
+    if request.method == "POST":
+
+        old = request.form["old_password"]
+        new = request.form["new_password"]
+
+        if check_password_hash(current_user.password, old):
+
+            current_user.password = generate_password_hash(new)
+
+            db.session.commit()
+
+            return redirect(url_for("settings"))
+
+    return render_template("change_password.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)

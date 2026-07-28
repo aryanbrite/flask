@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='settings.css') }}">
+
+</head>
+
+<body>
+
+<div class="main">
+
+    <a href="{{ url_for('home') }}">
+        ← Back
+    </a>
+
+    <h1>Settings</h1>
+
+    <div class="card">
+
+        <h2>Profile</h2>
+
+        <p>Username</p>
+
+        <strong>{{ current_user.username }}</strong>
+
+    </div>
+
+    <div class="card">
+
+        <a href="{{ url_for('change_password') }}">
+            Change Password
+        </a>
+
+    </div>
+
+    <div class="card">
+
+        <a href="{{ url_for('logout') }}">
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
