@@ -1,0 +1,64 @@
+.main{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+@font-face {
+        font-family: safiro;
+        src: url(./safiro-medium-webfont.ttf)format("truetype");
+        font-display: swap
+}
+
+h2, h1, p, strong{
+    font-family: safiro;
+    font-weight: 1;
+}
+
+#back {
+    display: block;
+    border: 1px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+    color: white;
+    text-decoration: none;
+    position: fixed;
+    top: 1vh;
+    left: 0;
+}
+
+#back:hover {
+    background-color: rgb(255, 137, 27);;
+}
+#hr {
+    margin-bottom: 6vh;
+}
+
+#log {
+    width: 50px;
+    position: fixed;
+    top: 2vh;
+    left: 9vh;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+#but {
+    color: white;
+    font-family: safiro;
+    font-weight: 1;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    border-radius: 12px;
+    background-color: rgb(255, 137, 27);
+    margin-bottom: 15px;
+    
+}
