@@ -16,6 +16,7 @@
     {% else %}    
     {% for note in notes %}
         <p>{{note.content}}</p>
+        <a href="{{url_for ('delete', id=note.id )}}">Delete</a>
     {% endfor %}
     {% endif %}
 </body>
