@@ -13,7 +13,16 @@ body{
         font-display: swap
 }
 
-h1{
+h1, p{
     font-family: safiro;
     font-weight: 1;
+}
+
+#new-note{
+    color: white;
+    text-decoration: none;
+}
+
+#new{
+    border: 1px solid white;
 }
