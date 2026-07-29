@@ -1,46 +1,161 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Register</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
-    <link rel="shortcut icon" href="https://cdn.hackclub.com/019fa7be-ff73-7b05-bfe8-06f4a1d2d316/Untitled%20design.png" type="image/x-icon">
 
+<title>Register</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
 
 </head>
 
 <body>
+
 <div class="main">
-    
-    <h1 id="create" >Create Account</h1>
-    <img id="loginimg" src="https://i.pinimg.com/736x/bd/9d/58/bd9d58553949b4601183a950d1d81d92.jpg" alt="">
-        <img id="log" src="https://cdn.hackclub.com/019fa7be-ff73-7b05-bfe8-06f4a1d2d316/Untitled%20design.png" alt="">
-    
-    <form method="POST">
-    
-        <input
-            type="text"
-            name="username"
-            placeholder="Username"
-            id="user"
-        >
-    
-        <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            id="pass"
-        >
-    
-        <button id="logb" >
-            Register
-        </button>
-    
-    </form>
-    
-    <a id="reg" href="/login">
-        Already have account?
-    </a>
+
+<h1 id="create">Create Account</h1>
+
+<img id="loginimg"
+src="https://i.pinimg.com/736x/bd/9d/58/bd9d58553949b4601183a950d1d81d92.jpg">
+
+
+<img id="log"
+src="https://cdn.hackclub.com/019fa7be-ff73-7b05-bfe8-06f4a1d2d316/Untitled%20design.png">
+
+
+<form method="POST">
+
+
+<input
+type="text"
+name="username"
+placeholder="Username"
+id="user"
+required
+>
+
+
+<input
+type="password"
+name="password"
+placeholder="Password"
+id="pass"
+required
+>
+
+
+<div id="password-box">
+
+<p>Password must contain:</p>
+
+<ul>
+
+<li id="length">❌ 8 characters</li>
+
+<li id="upper">❌ Uppercase letter</li>
+
+<li id="lower">❌ Lowercase letter</li>
+
+<li id="number">❌ Number</li>
+
+<li id="special">❌ Special character</li>
+
+</ul>
+
 </div>
+
+
+<button id="logb" disabled>
+Register
+</button>
+
+
+</form>
+
+
+<a id="reg" href="/login">
+Already have account?
+</a>
+
+
+</div>
+
+
+
+<script>
+
+
+const password = document.getElementById("pass");
+const button = document.getElementById("logb");
+
+
+const checks = {
+
+length: document.getElementById("length"),
+upper: document.getElementById("upper"),
+lower: document.getElementById("lower"),
+number: document.getElementById("number"),
+special: document.getElementById("special")
+
+};
+
+
+
+password.addEventListener("input",()=>{
+
+
+let value=password.value;
+
+
+let rules={
+
+length:value.length>=8,
+
+upper:/[A-Z]/.test(value),
+
+lower:/[a-z]/.test(value),
+
+number:/[0-9]/.test(value),
+
+special:/[!@#$%^&*(),.?":{}|<>]/.test(value)
+
+};
+
+
+
+let valid=true;
+
+
+for(let key in rules){
+
+
+if(rules[key]){
+
+checks[key].innerHTML="✅ "+checks[key].innerHTML.substring(2);
+
+}
+
+else{
+
+checks[key].innerHTML="❌ "+checks[key].innerHTML.substring(2);
+
+valid=false;
+
+}
+
+
+}
+
+
+
+button.disabled=!valid;
+
+
+});
+
+
+
+</script>
+
 
 </body>
 </html>
