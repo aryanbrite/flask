@@ -1,91 +1,177 @@
 .main{
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left:4%;
+    margin-right:4%;
 }
 
 body{
-    background-color: black;
-    color: white;
+    background-color:black;
+    color:white;
+}
+
+
+#login{
+    position:fixed;
+    left:20vw;
+    top:20vh;
 }
 
 
 
-#login {
-    position: fixed;
-    left: 18.5vw;
-    top: 20vh;
+#user{
+    position:fixed;
+    left:18vw;
+    top:35vh;
+    width:20vw;
+    height:40px;
+    border-radius:7px;
+    outline:none;
+    border:1px solid black;
+    padding-left:10px;
 }
 
-#user {
-    position: fixed;
-    left: 18vw;
-    top: 35vh;
-    width: 20vw;
-    height: 40px;
-    border-radius: 7px;
-    outline: none;
-    border: 1px solid black;
-    padding-left: 10px;
-}
-#pass {
-    position: fixed;
-    left: 18vw;
-    top: 43vh;
-    width: 20vw;
-    height: 40px;
-    border-radius: 7px;
-    outline: none;
-    padding-left: 10px;
-    border: 1px solid black;
+
+#pass{
+    position:fixed;
+    left:18vw;
+    top:43vh;
+    width:20vw;
+    height:40px;
+    border-radius:7px;
+    outline:none;
+    padding-left:10px;
+    border:1px solid black;
 }
 
-button {
-    border-radius: 12px;
-    background-color: rgb(255, 137, 27);
-    border: 1px solid black;
-    padding: 10px;
-    width: 80px;
-    cursor: pointer;
+
+
+button{
+
+    border-radius:12px;
+    background-color:rgb(255,137,27);
+    border:1px solid black;
+    padding:10px;
+    width:80px;
+    cursor:pointer;
+
 }
 
-#logb {
-    position: fixed;
-    left: 25.5vw;
-    top: 55vh;
-}
-#loginimg {
-    position: fixed;
-    top: 3vh;
-    right: 2vh;
-    width: 45vw;
-    height: 94vh;
-    border-radius: 30px;
+
+#logb{
+
+    position:fixed;
+    left:25.5vw;
+    top:55vh;
+
 }
 
-@font-face {
-        font-family: safiro;
-        src: url(./safiro-medium-webfont.ttf)format("truetype");
-        font-display: swap
+
+
+#loginimg{
+
+    position:fixed;
+    top:3vh;
+    right:2vh;
+    width:45vw;
+    height:94vh;
+    border-radius:30px;
+
 }
+
+
+
+@font-face{
+
+    font-family:safiro;
+    src:url(./safiro-medium-webfont.ttf) format("truetype");
+    font-display:swap;
+
+}
+
+
 
 h1{
-    font-family: safiro;
-    font-weight: 1;
+
+    font-family:safiro;
+    font-weight:1;
+
 }
 
-#log {
-    width: 50px;
-    position: fixed;
-    top: 3vh;
-    left: 3vh;
+
+
+#log{
+
+    width:50px;
+    position:fixed;
+    top:3vh;
+    left:3vh;
+
 }
 
-#reg {
-    color: white;
-    font-family: safiro;
-    cursor: pointer;
-    position: fixed;
-    top: 80vh;
-    left: 23vw;
+
+
+#reg{
+
+    color:white;
+    font-family:safiro;
+    cursor:pointer;
+    position:fixed;
+    top:90vh;
+    left:23vw;
+
+}
+
+
+
+/* Password Rules Box */
+
+#password-box{
+
+    position:fixed;
+    left:28%;
+    top:60vh;
+    transform:translateX(-50%);
+    background:black;
+    color:white;
+    padding:12px 20px;
+    font-family:safiro;
+    width:260px;
+    text-align:center;
+
+}
+
+
+
+#password-box p{
+
+    margin:0 0 10px 0;
+    font-size:16px;
+
+}
+
+
+
+#password-box ul{
+
+    padding:0;
+    margin:0;
+
+}
+
+
+
+#password-box li{
+
+    list-style:none;
+    font-size:14px;
+    margin-top:6px;
+
+}
+
+
+
+#logb:disabled{
+
+    opacity:0.5;
+    cursor:not-allowed;
 
 }
